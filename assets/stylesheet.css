@@ -1,8 +1,10 @@
+/*Regras CSS para configurações básicas da página*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap');
 :root{
     --cor-azul-primaria: #0074E4;
     --cor-azul-secundaria: #001F3F;
     --cor-amarela-destaque: #FFA500;
+    --cor-amarela-hover: #c78202;
     --cor-fonte-preta: #1E1E1E;
     --cor-fonte-branca: #F5F5F5;
     --fonte-titulo: 'Montserrat', sans-serif;
@@ -11,6 +13,7 @@
     --fonte-paragrafo-telas-g-m: 23px;
     --fonte-titulo-telas-p: 25px;
     --fonte-paragrafo-telas-p: 17px;
+    --fonte-btn-texto: 35px;
 }
 * {
     padding: 0;
@@ -20,6 +23,10 @@
     list-style-type: none;
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition-duration: 350ms;
+}
+/*Regras CSS que se aplicam a múltiplos elementos em todos os tamanhos de tela*/
+html.sr, .hidden{
+    display: hidden;
 }
 li::before{
     content: url('./check-amarelo-telas-g-m.png');
@@ -47,7 +54,6 @@ li{
 .negrito{
     font-weight: bold;
 }
-
 #hero-row, footer{
     background: linear-gradient(180deg, var(--cor-azul-secundaria) 0%, var(--cor-azul-primaria) 100%);
 }
@@ -62,15 +68,12 @@ hr{
     color: var(--cor-fonte-branca);
 }
 #btn:hover{
-    background-color: #c78202;
+    background-color: var(--cor-amarela-hover);
     cursor: pointer;
 }
-
-html.sr, .hidden{
-    display: hidden;
-}
-
+/*Regras CSS para telas de celulares*/
 @media (max-width: 500px) {
+    /*Regras CSS para tamanhos de fontes, espaçamentos e alinhamentos*/
     .titulo-tamanho{
         font-size: var(--fonte-titulo-telas-p);
         line-height: 140%;
@@ -102,7 +105,7 @@ html.sr, .hidden{
     .justify{
         text-align: justify;
     }
-
+    /*Regras CSS para imagens*/
     #img-hero-row, #img-galeria-1, #img-galeria-2, #img-galeria-3, #img-galeria-4, #img-galeria-5{
         width: 100%;
         max-height: 80vh;
@@ -113,14 +116,14 @@ html.sr, .hidden{
     #img-seção-2{
         display: none;
     }
-
+    /*Regras CSS para elementos FlexBox*/
     #seção-2, #seção-3{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-
+    /*Regras CSS para elementos específicos*/
     #btn{
         width: 100%;
         padding: 3% 2%;
@@ -131,7 +134,9 @@ html.sr, .hidden{
         padding-right: 3%;
     }
 }
+/*Regras CSS para telas de tablets*/
 @media (min-width: 501px){
+    /*Regras CSS para tamanhos de fontes, espaçamentos e alinhamentos*/
     .titulo-tamanho{
         font-size: var(--fonte-titulo-telas-g-m);
         line-height: 144.444%;
@@ -166,7 +171,7 @@ html.sr, .hidden{
     .justify{
         text-align: justify;
     }
-
+    /*Regras CSS para imagens*/
     #img-hero-row, #img-galeria-1, #img-galeria-2, #img-galeria-3, #img-galeria-4, #img-galeria-5{
         object-fit: cover;
         border-radius: 10px;
@@ -186,23 +191,23 @@ html.sr, .hidden{
         width: 100px;
         height: 100px;
     }
-
+    /*Regras CSS para elementos FlexBox*/
     #seção-2, #seção-3{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-
+    /*Regras CSS para elementos específicos*/
     #btn{
         width: 60%;
         padding: 2% 0%;
         border-radius: 5px;
     }
     #btn > p {
-        font-size: 35px;
+        font-size: var(--fonte-btn-texto);
     }
-    #duas-ultimas-img-galeria{
+    #ultimas-img-galeria{
         display: flex;
         width: 100%;
         gap: 3%;
@@ -212,7 +217,9 @@ html.sr, .hidden{
         margin: 0 auto;
     }
 }
+/*Regras CSS para telas de computadores*/
 @media (min-width: 1025px){
+    /*Regras CSS para tamanhos de fontes, espaçamentos e alinhamentos*/
     .margem-lateral{
         margin-right: 3%;
         margin-left: 3%;
@@ -236,7 +243,7 @@ html.sr, .hidden{
     .left{
         text-align: left;
     }
-
+    /*Regras CSS para imagens*/
     #img-hero-row, #seção-3-conteudo-flex{
         width: 100%;
     }
@@ -256,19 +263,19 @@ html.sr, .hidden{
         border-radius: 10px;
         box-shadow: 5px 5px 10px 0px var(--cor-fonte-preta);
     }
-
-    #hero-row, #seção-2, #seção-3-conteudo-flex, #duas-ultimas-img-galeria{
+    /*Regras CSS para elementos FlexBox*/
+    #hero-row, #seção-2, #seção-3-conteudo-flex, #ultimas-img-galeria{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
- 
+    /*Regras CSS para elementos específicos*/
     #btn{
         width: 55%;
         padding: 2% 0%;
     }
     #btn > p {
-        font-size: 35px;
+        font-size: var(--fonte-btn-texto);
     }
 }
