@@ -18,6 +18,8 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-duration: 350ms;
 }
 li::before{
     content: url('./check-amarelo-telas-g-m.png');
@@ -55,6 +57,16 @@ li{
 #btn{
     background-color: var(--cor-amarela-destaque);
     border: none;
+}
+hr{
+    color: var(--cor-fonte-branca);
+}
+#btn:hover, #img-galeria-1:hover, #img-galeria-2:hover, #img-galeria-3:hover, #img-galeria-4:hover, #img-galeria-5:hover{
+    transform: scale(1.03);
+}
+
+html.sr, .hidden{
+    display: hidden;
 }
 
 @media (max-width: 500px) {
@@ -95,7 +107,7 @@ li{
         max-height: 80vh;
         object-fit: cover;
         border-radius: 10px;
-        box-shadow: 5px 5px 10px 0px var(--cor-azul-secundaria);
+        box-shadow: 5px 5px 10px 0px var(--cor-fonte-preta);
     }
     #img-seção-2{
         display: none;
@@ -155,11 +167,16 @@ li{
     }
 
     #img-hero-row, #img-galeria-1, #img-galeria-2, #img-galeria-3, #img-galeria-4, #img-galeria-5{
-        width: 100%;
-        max-height: 80vh;
         object-fit: cover;
         border-radius: 10px;
-        box-shadow: 5px 5px 10px 0px var(--cor-azul-secundaria);
+    }
+    #img-hero-row, #img-galeria-1, #img-galeria-2{
+        width: 100%;
+        max-height: 80vh;
+    }
+    #img-galeria-3, #img-galeria-4, #img-galeria-5{
+        width: 30vw;
+        height: 65vh;
     }
     #img-seção-2{
         display: none;
@@ -186,10 +203,68 @@ li{
     }
     #duas-ultimas-img-galeria{
         display: flex;
+        width: 100%;
         gap: 3%;
     }
     hr{
         width: 50vw;
         margin: 0 auto;
+    }
+}
+@media (min-width: 1025px){
+    .margem-lateral{
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+    .espaçamento-cima-baixo{
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .espaçamento-baixo{
+        margin-bottom: 1.5%;
+    }
+    #hero-row-caixa-texto, #seção-2-caixa-texto, #img-caixa-hero-row{
+        width: 50vw;
+    }
+    #hero-row, #seção-2{
+        min-height: 100vh;
+    }
+    .opiniao-caixa{
+        width: 25vw;
+    }
+    .left{
+        text-align: left;
+    }
+
+    #img-hero-row, #seção-3-conteudo-flex{
+        width: 100%;
+    }
+    #img-galeria-1, #img-galeria-2, #img-galeria-3{
+        width: 100%;
+        max-height: 95vh;
+    }
+    #img-galeria-3 ,#img-galeria-4, #img-galeria-5{
+        width: 25vw;
+        height: 75vh;
+    }
+    #img-seção-2{
+        display: inline-flex;
+        width: 32vw;
+        height: 88vh;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px 0px var(--cor-fonte-preta);
+    }
+
+    #hero-row, #seção-2, #seção-3-conteudo-flex, #duas-ultimas-img-galeria{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+ 
+    #btn{
+        width: 55%;
+        padding: 2% 0%;
     }
 }

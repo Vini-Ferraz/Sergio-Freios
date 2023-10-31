@@ -1,59 +1,61 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="sr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Serviços especializados em manutenção e reparos de freios para caminhões em Sarandi, Maringá e Marialva. Trabalhamos com válvulas, sistemas pneumáticos, compressores, cuícas e sistema de ar">
     <link rel="stylesheet" href="assets\stylesheet.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <title>Sergio Freios - 30 anos de experiência em freio a ar</title>
 </head>
 <body>
     <main>
         <section id="hero-row" class="espaçamento-cima-baixo">
             <article class="margem-lateral" id="hero-row-caixa-texto">
-                <h2 class="paragrafo branco paragrafo-tamanho espaçamento-baixo">Sergio Freios</h2>
-                <h1 class="titulo branco titulo-tamanho espaçamento-baixo espaçamento-linhas-titulo">Manutenção Especializada em Freios a Ar para Caminhões</h1>
-                <p class="paragrafo branco paragrafo-tamanho espaçamento-baixo"><span class="underline-destaque">Mais de 30 anos de experiência</span> em freios pneumáticos, compressores, cuícas e válvulas. Atendendo em Maringá, Sarandi e Marialva.</p>
-                <button id="btn" class="espaçamento-baixo"><a href="#" class="titulo titulo-tamanho preto">Ligue já!</a></button>
+                <h2 class="paragrafo branco paragrafo-tamanho espaçamento-baixo  show-side hidden">Sergio Freios</h2>
+                <h1 class="titulo branco titulo-tamanho espaçamento-baixo espaçamento-linhas-titulo show-side hidden">Manutenção Especializada em Freios a Ar para Caminhões</h1>
+                <p class="paragrafo branco paragrafo-tamanho espaçamento-baixo show-side hidden"><span class="underline-destaque">Mais de 30 anos de experiência</span> em freios pneumáticos, compressores, cuícas e válvulas. Atendendo em Maringá, Sarandi e Marialva.</p>
+                <button id="btn" class="espaçamento-baixo show-side hidden"><a href="#" class="titulo titulo-tamanho preto">Ligue já!</a></button>
             </article>
-            <figure class="margem-lateral">
-                <img src="assets\img-hero-row.jpg" alt="foto de várias prateadas de caminhão em cima de uma mesa" id="img-hero-row">
+            <figure class="margem-lateral" id="img-caixa-hero-row">
+                <img src="assets\img-hero-row.jpg" alt="foto de várias prateadas de caminhão em cima de uma mesa" id="img-hero-row" class="show-side hidden">
             </figure>
         </section>
 
         <section class="margem-lateral espaçamento-cima-baixo" id="seção-2">
+            <img>
             <figure>
-                <img src="assets\img-seção-2.jpg" alt="uma mão segurando uma peça pequena e  prateada" id="img-seção-2">
+                <img src="assets\img-seção-2.jpg" alt="uma mão segurando uma peça pequena e  prateada" id="img-seção-2" class="show-up hidden">
             </figure>
             <article id="seção-2-caixa-texto">
-                <h1 class="titulo preto titulo-tamanho espaçamento-baixo center">Nossos Serviços Confiáveis</h1>
-                <p class="paragrafo preto paragrafo-tamanho espaçamento-baixo justify"><span class="underline-destaque">Sergio Ferraz</span> é um <span class="underline-destaque">especialista</span> com <span class="underline-destaque">mais de 30 anos de experiência</span> no setor de manutenção de caminhões. Ele é conhecido por seu serviço rápido, eficiente e de alta qualidade.</p>
+                <h1 class="titulo preto titulo-tamanho espaçamento-baixo center left show-up hidden">Nossos Serviços Confiáveis</h1>
+                <p class="paragrafo preto paragrafo-tamanho espaçamento-baixo justify show-up hidden"><span class="underline-destaque">Sergio Ferraz</span> é um <span class="underline-destaque">especialista</span> com <span class="underline-destaque">mais de 30 anos de experiência</span> no setor de manutenção de caminhões. Ele é conhecido por seu serviço rápido, eficiente e de alta qualidade.</p>
                 <ul class="paragrafo preto negrito paragrafo-tamanho">
-                    <li class="espaçamento-baixo">Manutenção especializada em freios pneumáticos</li>
-                    <li class="espaçamento-baixo">Serviços de compressores</li>
-                    <li class="espaçamento-baixo">Reparação e substituição de cuícas </li>
-                    <li class="espaçamento-baixo">Instalação e manutenção de válvulas</li>
-                    <li>Instalação completa do sistema de ar</li>
+                    <li class="espaçamento-baixo show-up hidden">Manutenção especializada em freios pneumáticos</li>
+                    <li class="espaçamento-baixo show-up hidden">Serviços de compressores</li>
+                    <li class="espaçamento-baixo show-up hidden">Reparação e substituição de cuícas </li>
+                    <li class="espaçamento-baixo show-up hidden">Instalação e manutenção de válvulas</li>
+                    <li class="show-up hidden">Instalação completa do sistema de ar</li>
                 </ul>
             </article>
         </section>
 
         <section class="margem-lateral espaçamento-cima-baixo center" id="seção-3">
-            <h1 class="titulo preto titulo-tamanho espaçamento-baixo">Avaliações dos Nossos Clientes</h1>
-            <div>
-                <article class="paragrafo preto paragrafo-tamanho espaçamento-baixo opiniao-caixa">
+            <h1 class="titulo preto titulo-tamanho espaçamento-baixo show-up hidden"">Avaliações dos Nossos Clientes</h1>
+            <div id="seção-3-conteudo-flex">
+                <article class="paragrafo preto paragrafo-tamanho espaçamento-baixo opiniao-caixa show-up hidden"">
                     <img src="assets\quote.svg" alt="simbolo de aspas duplas da cor azul" class="aspas-azuis">
                     <p>Rápido e eficiente. Recomendo os serviços do Sergio.</p>
                     <p class="negrito"> Chassi Leyzer</p>
                 </article>
 
-                <article class="paragrafo preto paragrafo-tamanho espaçamento-baixo opiniao-caixa">
+                <article class="paragrafo preto paragrafo-tamanho espaçamento-baixo opiniao-caixa show-up hidden"">
                     <img src="assets\quote.svg" alt="simbolo de aspas duplas da cor azul" class="aspas-azuis">
                     <p>O serviço do Sergio é bom. Ele trabalha rápido e oferece um serviço de qualidade.</p>
                     <p class="negrito">Rodofreios</p>
                 </article>
 
-                <article class="paragrafo preto paragrafo-tamanho opiniao-caixa">
+                <article class="paragrafo preto paragrafo-tamanho opiniao-caixa show-up hidden">
                     <img src="assets\quote.svg" alt="simbolo de aspas duplas da cor azul" class="aspas-azuis">
                     <p>Serviço de alta qualidade. Fiquei muito satisfeito.</p>
                     <p class="negrito"> Recuperadora Tavoa</p>
@@ -62,15 +64,16 @@
         </section>
 
         <section class="margem-lateral espaçamento-cima-baixo center">
-            <h1 class="titulo preto titulo-tamanho espaçamento-baixo">Galeria</h1>
-            <p class="paragrafo preto paragrafo-tamanho espaçamento-baixo">Dê uma olhada em fotos de alguns de nossos trabalho concluídos com sucesso.</p>
+            <h1 class="titulo preto titulo-tamanho espaçamento-baixo show-up hidden">Galeria</h1>
+            <p class="paragrafo preto paragrafo-tamanho espaçamento-baixo show-up hidden">Dê uma olhada em fotos de alguns de nossos trabalho concluídos com sucesso.</p>
             <div>
                 <figure>
-                    <img src="assets\img-mecanico-2.jpg" alt="várias peças sobre uma mesa" id="img-galeria-1" class="espaçamento-baixo">
-                    <img src="assets\img-mecanico-5.jpg" alt="várias peças sobre uma mesa" id="img-galeria-2" class="espaçamento-baixo">
+                    <img src="assets\img-mecanico-2.jpg" alt="várias peças sobre uma mesa" id="img-galeria-1" class="espaçamento-baixo show-side hidden">
+                    <img src="assets\img-mecanico-5.jpg" alt="várias peças sobre uma mesa" id="img-galeria-2" class="espaçamento-baixo show-side hidden">
                     <div id="duas-ultimas-img-galeria">
-                        <img src="assets\img-mecanico-6.jpg" alt="uma peça preta" id="img-galeria-4" class="espaçamento-baixo">
-                        <img src="assets\img-mecanico-3.jpg" alt="uma peça prateada em cima de uma caixa" id="img-galeria-5">
+                        <img src="assets\img-mecanico-6.jpg" alt="uma peça preta" id="img-galeria-3" class="espaçamento-baixo show-side hidden" id="img-galeria-4">
+                        <img src="assets\img-mecanico.jpg" alt="peças prateadas em uma mesa" class="espaçamento-baixo show-side hidden" id="img-galeria-4">
+                        <img src="assets\img-mecanico-3.jpg" alt="uma peça prateada em cima de uma caixa" class="show-side hidden" id="img-galeria-5">
                     </div>
                 </figure>
             </div>
@@ -78,11 +81,12 @@
     </main>
     <footer class="espaçamento-cima-baixo center">
         <div class="margem-lateral">
-            <h1 class="titulo branco titulo-tamanho espaçamento-baixo">SERGIO FREIOS</h1>
-            <hr class="espaçamento-baixo">
-            <p class="paragrafo branco paragrafo-tamanho espaçamento-baixo">Atendemos de Segunda a Sábado: 08:00h - 18:00h</p>
-            <p class="paragrafo branco paragrafo-tamanho">+55 (44) 0000-0000</p>
+            <h1 class="titulo branco titulo-tamanho espaçamento-baixo show-side hidden">SERGIO FREIOS</h1>
+            <hr class="espaçamento-baixo show-side hidden">
+            <p class="paragrafo branco paragrafo-tamanho espaçamento-baixo show-side hidden">Atendemos de Segunda a Sábado: 08:00h - 18:00h</p>
+            <p class="paragrafo branco paragrafo-tamanho show-side hidden">+55 (44) 0000-0000</p>
         </div>
     </footer>
+    <script src="assets\script.js"></script>
 </body>
 </html>
