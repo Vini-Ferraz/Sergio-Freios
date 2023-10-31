@@ -61,8 +61,8 @@ li{
 hr{
     color: var(--cor-fonte-branca);
 }
-#btn:hover, #img-galeria-1:hover, #img-galeria-2:hover, #img-galeria-3:hover, #img-galeria-4:hover, #img-galeria-5:hover{
-    transform: scale(1.03);
+#btn:hover{
+    background-color: #c78202;
 }
 
 html.sr, .hidden{
@@ -198,7 +198,7 @@ html.sr, .hidden{
         padding: 2% 0%;
         border-radius: 5px;
     }
-    #btn > a {
+    #btn > p {
         font-size: 35px;
     }
     #duas-ultimas-img-galeria{
@@ -266,5 +266,8 @@ html.sr, .hidden{
     #btn{
         width: 55%;
         padding: 2% 0%;
+    }
+    #btn > p {
+        font-size: 35px;
     }
 }
