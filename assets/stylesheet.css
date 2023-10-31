@@ -93,7 +93,7 @@ hr{
     .espaçamento-baixo{
         margin-bottom: 5%;
     }
-    #seção-2{
+    #hero-row, #seção-2{
         min-height: 100vh;
     }
     .opiniao-caixa{
