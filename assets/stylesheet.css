@@ -63,6 +63,7 @@ hr{
 }
 #btn:hover{
     background-color: #c78202;
+    cursor: pointer;
 }
 
 html.sr, .hidden{
