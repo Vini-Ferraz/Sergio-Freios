@@ -1,281 +1,318 @@
 /*Regras CSS para configurações básicas da página*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap');
-:root{
-    --cor-azul-primaria: #0074E4;
-    --cor-azul-secundaria: #001F3F;
-    --cor-amarela-destaque: #FFA500;
-    --cor-amarela-hover: #c78202;
-    --cor-fonte-preta: #1E1E1E;
-    --cor-fonte-branca: #F5F5F5;
-    --fonte-titulo: 'Montserrat', sans-serif;
-    --fonte-paragrafo: 'Open Sans', sans-serif;
-    --fonte-titulo-telas-g-m: 45px;
-    --fonte-paragrafo-telas-g-m: 23px;
-    --fonte-titulo-telas-p: 25px;
-    --fonte-paragrafo-telas-p: 17px;
-    --fonte-btn-texto: 35px;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap");
+:root {
+  --cor-azul-primaria: #0074e4;
+  --cor-azul-secundaria: #001f3f;
+  --cor-amarela-destaque: #ffa500;
+  --cor-amarela-hover: #c78202;
+  --cor-fonte-preta: #1e1e1e;
+  --cor-fonte-branca: #f5f5f5;
+  --fonte-titulo: "Montserrat", sans-serif;
+  --fonte-paragrafo: "Open Sans", sans-serif;
+  --fonte-titulo-telas-g-m: 45px;
+  --font-btn-telas-g-m: 30px;
+  --fonte-paragrafo-telas-g-m: 23px;
+  --fonte-titulo-telas-p: 25px;
+  --fonte-btn-telas-p: 20px;
+  --fonte-paragrafo-telas-p: 17px;
 }
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition-duration: 350ms;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 350ms;
 }
 /*Regras CSS que se aplicam a múltiplos elementos em todos os tamanhos de tela*/
-html.sr, .hidden{
-    display: hidden;
+html.sr,
+.hidden {
+  display: hidden;
 }
-li::before{
-    content: url('./check-amarelo-telas-g-m.png');
-    padding-right: 3%;
+li::before {
+  content: url("./check-amarelo-telas-g-m.png");
+  padding-right: 3%;
 }
-li{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-items: center;
+li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
 }
-.titulo{
-    font-family: var(--fonte-titulo);
-    font-weight: bold;
+.titulo {
+  font-family: var(--fonte-titulo);
+  font-weight: bold;
 }
-.paragrafo{
-    font-family: var(--fonte-paragrafo);
+.paragrafo {
+  font-family: var(--fonte-paragrafo);
 }
-.preto{
-    color: var(--cor-fonte-preta);
+.preto {
+  color: var(--cor-fonte-preta);
 }
-.branco{
-    color: var(--cor-fonte-branca);
+.branco {
+  color: var(--cor-fonte-branca);
 }
-.negrito{
-    font-weight: bold;
+.negrito {
+  font-weight: bold;
 }
-#hero-row, footer{
-    background: linear-gradient(180deg, var(--cor-azul-secundaria) 0%, var(--cor-azul-primaria) 100%);
+#hero-row,
+footer {
+  background: linear-gradient(
+    180deg,
+    var(--cor-azul-secundaria) 0%,
+    var(--cor-azul-primaria) 100%
+  );
 }
-.underline-destaque{
-    text-decoration: underline solid 3px var(--cor-amarela-destaque);
+.underline-destaque {
+  text-decoration: underline solid 3px var(--cor-amarela-destaque);
 }
-#btn{
-    background-color: var(--cor-amarela-destaque);
-    border: none;
+#btn {
+  background-color: var(--cor-amarela-destaque);
+  border: none;
 }
-hr{
-    color: var(--cor-fonte-branca);
+hr {
+  color: var(--cor-fonte-branca);
 }
-#btn:hover{
-    background-color: var(--cor-amarela-hover);
-    cursor: pointer;
+#btn:hover {
+  background-color: var(--cor-amarela-hover);
+  cursor: pointer;
 }
 /*Regras CSS para telas de celulares*/
 @media (max-width: 500px) {
-    /*Regras CSS para tamanhos de fontes, espaçamentos e alinhamentos*/
-    .titulo-tamanho{
-        font-size: var(--fonte-titulo-telas-p);
-        line-height: 140%;
-    }
-    .paragrafo-tamanho{
-        font-size: var(--fonte-paragrafo-telas-p);
-        line-height: 147.059%;
-    }
-    .margem-lateral{
-        margin-right: 5%;
-        margin-left: 5%;
-    }
-    .espaçamento-cima-baixo{
-        padding-top: 7%;
-        padding-bottom: 7%;
-    }
-    .espaçamento-baixo{
-        margin-bottom: 5%;
-    }
-    #hero-row, #seção-2{
-        min-height: 100vh;
-    }
-    .opiniao-caixa{
-        width: 75vw;
-    }
-    .center{
-        text-align: center;
-    }
-    .justify{
-        text-align: justify;
-    }
-    /*Regras CSS para imagens*/
-    #img-hero-row, #img-galeria-1, #img-galeria-2, #img-galeria-3, #img-galeria-4, #img-galeria-5{
-        width: 100%;
-        max-height: 80vh;
-        object-fit: cover;
-        border-radius: 10px;
-        box-shadow: 5px 5px 10px 0px var(--cor-fonte-preta);
-    }
-    #img-seção-2{
-        display: none;
-    }
-    /*Regras CSS para elementos FlexBox*/
-    #hero-row, #seção-2, #seção-3{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    /*Regras CSS para elementos específicos*/
-    #btn{
-        width: 100%;
-        padding: 3% 2%;
-        border-radius: 5px;
-    }
-    li::before{
-        content: url('check-amarelo.svg');
-        padding-right: 3%;
-    }
+  /*Regras CSS para tamanhos de fontes, espaçamentos e alinhamentos*/
+  .titulo-tamanho {
+    font-size: var(--fonte-titulo-telas-p);
+    line-height: 140%;
+  }
+  .paragrafo-tamanho {
+    font-size: var(--fonte-paragrafo-telas-p);
+    line-height: 147.059%;
+  }
+  .margem-lateral {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  .espaçamento-cima-baixo {
+    padding-top: 7%;
+    padding-bottom: 7%;
+  }
+  .espaçamento-baixo {
+    margin-bottom: 5%;
+  }
+  #hero-row,
+  #seção-2 {
+    min-height: 100vh;
+  }
+  .opiniao-caixa {
+    width: 75vw;
+  }
+  .center {
+    text-align: center;
+  }
+  .justify {
+    text-align: justify;
+  }
+  /*Regras CSS para imagens*/
+  #img-hero-row,
+  #img-galeria-1,
+  #img-galeria-2,
+  #img-galeria-3,
+  #img-galeria-4,
+  #img-galeria-5 {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px var(--cor-fonte-preta);
+  }
+  #img-seção-2 {
+    display: none;
+  }
+  /*Regras CSS para elementos FlexBox*/
+  #hero-row,
+  #seção-2,
+  #seção-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  /*Regras CSS para elementos específicos*/
+  #btn {
+    width: 100%;
+    padding: 3% 2%;
+    border-radius: 5px;
+  }
+  li::before {
+    content: url("check-amarelo.svg");
+    padding-right: 3%;
+  }
 }
 /*Regras CSS para telas de tablets*/
-@media (min-width: 501px){
-    /*Regras CSS para tamanhos de fontes, espaçamentos e alinhamentos*/
-    .titulo-tamanho{
-        font-size: var(--fonte-titulo-telas-g-m);
-        line-height: 144.444%;
-    }
-    .paragrafo-tamanho{
-        font-size: var(--fonte-paragrafo-telas-g-m);
-        line-height: 160.87%;
-    }
-    .margem-lateral{
-        margin-right: 3%;
-        margin-left: 3%;
-    }
-    .espaçamento-cima-baixo{
-        padding-top: 9%;
-        padding-bottom: 9%;
-    }
-    .espaçamento-baixo{
-        margin-bottom: 4%;
-    }
-    #hero-row-caixa-texto, #seção-2-caixa-texto{
-        width: 90vw;
-    }
-    #seção-2{
-        min-height: 100vh;
-    }
-    .opiniao-caixa{
-        width: 50vw;
-    }
-    .center{
-        text-align: center;
-    }
-    .justify{
-        text-align: justify;
-    }
-    /*Regras CSS para imagens*/
-    #img-hero-row, #img-galeria-1, #img-galeria-2, #img-galeria-3, #img-galeria-4, #img-galeria-5{
-        object-fit: cover;
-        border-radius: 10px;
-    }
-    #img-hero-row, #img-galeria-1, #img-galeria-2{
-        width: 100%;
-        max-height: 80vh;
-    }
-    #img-galeria-3, #img-galeria-4, #img-galeria-5{
-        width: 30vw;
-        height: 65vh;
-    }
-    #img-seção-2{
-        display: none;
-    }
-    .aspas-azuis{
-        width: 100px;
-        height: 100px;
-    }
-    /*Regras CSS para elementos FlexBox*/
-    #seção-2, #seção-3{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    /*Regras CSS para elementos específicos*/
-    #btn{
-        width: 60%;
-        padding: 2% 0%;
-        border-radius: 5px;
-    }
-    #btn > p {
-        font-size: var(--fonte-btn-texto);
-    }
-    #ultimas-img-galeria{
-        display: flex;
-        width: 100%;
-        gap: 3%;
-    }
-    hr{
-        width: 50vw;
-        margin: 0 auto;
-    }
+@media (min-width: 501px) {
+  /*Regras CSS para tamanhos de fontes, espaçamentos e alinhamentos*/
+  .titulo-tamanho {
+    font-size: var(--fonte-titulo-telas-g-m);
+    line-height: 144.444%;
+  }
+  .paragrafo-tamanho {
+    font-size: var(--fonte-paragrafo-telas-g-m);
+    line-height: 160.87%;
+  }
+  .margem-lateral {
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+  .espaçamento-cima-baixo {
+    padding-top: 9%;
+    padding-bottom: 9%;
+  }
+  .espaçamento-baixo {
+    margin-bottom: 4%;
+  }
+  #hero-row-caixa-texto,
+  #seção-2-caixa-texto {
+    width: 90vw;
+  }
+  #seção-2 {
+    min-height: 100vh;
+  }
+  .opiniao-caixa {
+    width: 50vw;
+  }
+  .center {
+    text-align: center;
+  }
+  .justify {
+    text-align: justify;
+  }
+  /*Regras CSS para imagens*/
+  #img-hero-row,
+  #img-galeria-1,
+  #img-galeria-2,
+  #img-galeria-3,
+  #img-galeria-4,
+  #img-galeria-5 {
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  #img-hero-row,
+  #img-galeria-1,
+  #img-galeria-2 {
+    width: 100%;
+    max-height: 80vh;
+  }
+  #img-galeria-3,
+  #img-galeria-4,
+  #img-galeria-5 {
+    width: 30vw;
+    height: 65vh;
+  }
+  #img-seção-2 {
+    display: none;
+  }
+  .aspas-azuis {
+    width: 100px;
+    height: 100px;
+  }
+  /*Regras CSS para elementos FlexBox*/
+  #seção-2,
+  #seção-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  /*Regras CSS para elementos específicos*/
+  #btn {
+    display: inline-block;
+    width: fit-content;
+    padding: 3%;
+    border-radius: 5px;
+    font-size: var(--font-btn-telas-g-m);
+  }
+
+  #ultimas-img-galeria {
+    display: flex;
+    width: 100%;
+    gap: 3%;
+  }
+  hr {
+    width: 50vw;
+    margin: 0 auto;
+  }
 }
 /*Regras CSS para telas de computadores*/
-@media (min-width: 1025px){
-    /*Regras CSS para tamanhos de fontes, espaçamentos e alinhamentos*/
-    .margem-lateral{
-        margin-right: 3%;
-        margin-left: 3%;
-    }
-    .espaçamento-cima-baixo{
-        padding-top: 5%;
-        padding-bottom: 5%;
-    }
-    .espaçamento-baixo{
-        margin-bottom: 1.5%;
-    }
-    #hero-row-caixa-texto, #seção-2-caixa-texto, #img-caixa-hero-row{
-        width: 50vw;
-    }
-    #hero-row, #seção-2{
-        min-height: 100vh;
-    }
-    .opiniao-caixa{
-        width: 25vw;
-    }
-    .left{
-        text-align: left;
-    }
-    /*Regras CSS para imagens*/
-    #img-hero-row, #seção-3-conteudo-flex{
-        width: 100%;
-    }
-    #img-galeria-1, #img-galeria-2, #img-galeria-3{
-        width: 100%;
-        max-height: 95vh;
-    }
-    #img-galeria-3 ,#img-galeria-4, #img-galeria-5{
-        width: 25vw;
-        height: 75vh;
-    }
-    #img-seção-2{
-        display: inline-flex;
-        width: 32vw;
-        height: 88vh;
-        object-fit: cover;
-        border-radius: 10px;
-        box-shadow: 5px 5px 10px 0px var(--cor-fonte-preta);
-    }
-    /*Regras CSS para elementos FlexBox*/
-    #hero-row, #seção-2, #seção-3-conteudo-flex, #ultimas-img-galeria{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-    /*Regras CSS para elementos específicos*/
-    #btn{
-        width: 55%;
-        padding: 2% 0%;
-    }
-    #btn > p {
-        font-size: var(--fonte-btn-texto);
-    }
+@media (min-width: 1025px) {
+  /*Regras CSS para tamanhos de fontes, espaçamentos e alinhamentos*/
+  .margem-lateral {
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+  .espaçamento-cima-baixo {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .espaçamento-baixo {
+    margin-bottom: 1.5%;
+  }
+  #hero-row-caixa-texto,
+  #seção-2-caixa-texto,
+  #img-caixa-hero-row {
+    width: 50vw;
+  }
+  #hero-row,
+  #seção-2 {
+    min-height: 100vh;
+  }
+  .opiniao-caixa {
+    width: 25vw;
+  }
+  .left {
+    text-align: left;
+  }
+  /*Regras CSS para imagens*/
+  #img-hero-row,
+  #seção-3-conteudo-flex {
+    width: 100%;
+  }
+  #img-galeria-1,
+  #img-galeria-2,
+  #img-galeria-3 {
+    width: 100%;
+    max-height: 95vh;
+  }
+  #img-galeria-3,
+  #img-galeria-4,
+  #img-galeria-5 {
+    width: 25vw;
+    height: 75vh;
+  }
+  #img-seção-2 {
+    display: inline-flex;
+    width: 32vw;
+    height: 88vh;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px var(--cor-fonte-preta);
+  }
+  /*Regras CSS para elementos FlexBox*/
+  #hero-row,
+  #seção-2,
+  #seção-3-conteudo-flex,
+  #ultimas-img-galeria {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /*Regras CSS para elementos específicos*/
+  #btn {
+    padding: 2%;
+    font-size: var(--font-btn-telas-g-m);
+  }
+  #btn > p {
+    font-size: var(--fonte-btn-texto);
+  }
 }
