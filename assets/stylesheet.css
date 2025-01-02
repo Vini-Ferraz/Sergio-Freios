@@ -144,6 +144,9 @@ hr {
     padding: 3% 2%;
     border-radius: 5px;
   }
+  #informações-contato-desktop {
+    display: none;
+  }
   li::before {
     content: url("check-amarelo.svg");
     padding-right: 3%;
@@ -232,7 +235,9 @@ hr {
     border-radius: 5px;
     font-size: var(--font-btn-telas-g-m);
   }
-
+  #informações-contato-desktop {
+    display: none;
+  }
   #ultimas-img-galeria {
     display: flex;
     width: 100%;
@@ -312,7 +317,7 @@ hr {
     padding: 2%;
     font-size: var(--font-btn-telas-g-m);
   }
-  #btn > p {
-    font-size: var(--fonte-btn-texto);
+  #informações-contato-desktop {
+    display: block;
   }
 }
